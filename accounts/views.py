@@ -29,7 +29,7 @@ def signup(request):
         user.save()
 
         return redirect("user:login")
-    return render(request, "signup.html")
+    return render(request, "accounts/signup.html")
 
 # def signup(request):
 #     if request.method == 'POST':
@@ -54,7 +54,7 @@ def login(request):
             auth_login(request,user)
         else:
             print("실패")
-    return render(request, "login.html")
+    return render(request, "accounts/login.html")
 
 
 def logout(request):
