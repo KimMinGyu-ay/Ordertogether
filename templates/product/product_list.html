@@ -1,0 +1,26 @@
+
+<div class="container">
+    <h2>Products - 둘러보기</h2>
+    <div class="row">
+        {% for good in goods %}
+        <div class="col-sm-6">
+            <div class="card mb-3">
+                <div class="embed-responsive embed-responsive-4by3">
+                    <img class="card-img-top embed-responsive-item" src="https://user-images.githubusercontent.com/67406924/188053241-edb1d116-f570-4646-8023-11c0ba5d0cbe.jpg" width="100" alt="{{ good }}" />
+                </div>
+                <div class="card-body">
+                    <span class="badge bg-outline-dark float-rigth">미분류</span>
+                    <h3 class="card-title h4">{{ good.name }}</h3>
+                    <!-- <a class="btn btn-outline-dark" href="{{ good.get_absolute_url }}">구입하기 →</a> -->
+                </div>
+            <div class="card-footer">
+                <div class="small text-muted"></div>
+            </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
