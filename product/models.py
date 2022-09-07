@@ -12,3 +12,13 @@ class Product_list(models.Model):
     class Meta:
         db_table = "Product_list"
 
+
+
+class Product_detail(models.Model):
+    
+    ali_price = models.IntegerField(default=None)
+    ot_price = models.IntegerField(default=None)
+
+
+    class Meta:
+        db_table = "Product_detail"
