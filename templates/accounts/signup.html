@@ -21,18 +21,12 @@
                 <div class ="col-12">
                     <form action ="" method="POST">
                         {% csrf_token %}
-                        <div class="form-group">
-                          <label for="firstname">First name</label>
-                          <input type="name" class="form-control" id="exampleInputFirst" aria-describedby="name" name = "firstname" placeholder="Enter your first name">           
-                        </div>
-                        <div class="form-group">
-                            <label for="lastname">last name</label>
-                            <input type="name" class="form-control" id="exampleInputlast" aria-describedby="name" name = "lastname" placeholder="Enter your last name">
-                        </div>
 
                         <div class="form-group">
-                            <label for="username">ID</label>
-                            <input type="ID" class="form-control" id="ID" aria-describedby="ID" name = "username" placeholder="ID">
+                            <label for="exampleInputEmail1">ID</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name = "email" placeholder="Enter email">
+                          <small id="emailHelp" class="form-text text-muted">We'll never share your email with email else.</small>
+                          </div>
                             
                         </div>
                         <div class="form-group">
@@ -47,11 +41,7 @@
                             <small id="emailHelp" class="form-text text-muted">Retry to input password</small>
                         </div> -->
                         
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name = "email" placeholder="Enter email">
-                          <small id="emailHelp" class="form-text text-muted">We'll never share your email with email else.</small>
-                          </div>
+                        
 
                         <input type="submit" class="btn btn-primary" value = "Submit">
                       </form>
