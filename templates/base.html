@@ -1,36 +1,20 @@
-<div class="container">
-    <div class="card-deck">
-      <div class="card" *ngFor="let item of cards">
-        <div class="embed-responsive embed-responsive-4by3">
-          <img src="{{ item.imageUrl }}" class="card-img-top embed-responsive-item" alt="tree">
-        </div>
-        <div class="card-body">
-            <span class="badge bg-outline-dark float-rigth">미분류</span>
-            <h3 class="card-title h4">{{ good.name }}</h3>
-            <!-- <a class="btn btn-outline-dark" href="{{ good.get_absolute_url }}">구입하기 →</a> -->
-        </div>
-      </div>
-    </div>
-  </div>
+{% load static %}
+<html lang="ko">
+  <head>
+    <title>{% block head_title %}{% endblock %}</title>
+    {% block extra_head %}
+    {% endblock %}
+    {% include 'blog/head.html' %}
+  </head>
+  <body class="">
+    {% block body %}
 
+    {% block content %}
+    {% endblock %}
 
+    {% endblock %}
 
-  <!-- 21:9 aspect ratio -->
-<div class="embed-responsive embed-responsive-21by9">
-    <iframe class="embed-responsive-item" src="https://user-images.githubusercontent.com/67406924/188053241-edb1d116-f570-4646-8023-11c0ba5d0cbe.jpg"></iframe>
-  </div>
-  
-  <!-- 16:9 aspect ratio -->
-  <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="..."></iframe>
-  </div>
-  
-  <!-- 4:3 aspect ratio -->
-  <div class="embed-responsive embed-responsive-4by3">
-    <iframe class="embed-responsive-item" src="..."></iframe>
-  </div>
-  
-  <!-- 1:1 aspect ratio -->
-  <div class="embed-responsive embed-responsive-1by1">
-    <iframe class="embed-responsive-item" src="..."></iframe>
-  </div>
+    {% block extra_body %}
+    {% endblock %}
+  </body>
+</html>

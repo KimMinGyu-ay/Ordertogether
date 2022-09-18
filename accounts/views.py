@@ -49,6 +49,7 @@ def login(request):
 
         username = request.POST["username"]
         password = request.POST["password"]
+        
         user = authenticate(username = username, password = password)
         if user is not None: # 로그인 성공
             auth_login(request,user)
